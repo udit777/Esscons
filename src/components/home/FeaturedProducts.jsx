@@ -3,32 +3,13 @@ import { ArrowRight, Box, Settings, Truck } from 'lucide-react';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
 
-const products = [
-    {
-        id: 1,
-        name: 'Vibratory Road Roller',
-        model: 'VR-1100',
-        desc: 'High-performance compaction for all soil types. Features advanced hydraulic system.',
-        specs: ['11 Tons', '150 HP', 'Drum Drive'],
-        image: '/products/vibratory-road-roller.png'
-    },
-    {
-        id: 2,
-        name: 'Hydraulic Excavator',
-        model: 'EX-200',
-        desc: 'Precision control and maximum efficiency for mining and construction projects.',
-        specs: ['20 Tons', '1.2m³ Bucket', 'Turbo Engine'],
-        image: '/products/hydraulic-excavator.png'
-    },
-    {
-        id: 3,
-        name: 'Wheel Loader',
-        model: 'WL-500',
-        desc: 'Versatile loader with high bucket capacity and excellent maneuverability.',
-        specs: ['5 Tons', '3.0m³ Bucket', 'Articulated'],
-        image: '/products/wheel-loader.png'
-    }
-];
+import { allProducts } from '../../data/products';
+
+// Select first 3 products from the centralized list for the featured section
+const products = allProducts.slice(0, 3).map(p => ({
+    ...p,
+    specs: p.specs ? [p.specs] : [] // Ensure specs is an array for the card loop
+}));
 
 const FeaturedProducts = () => {
     return (
