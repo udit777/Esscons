@@ -5,7 +5,7 @@ import About from './pages/About';
 import Products from './pages/Products';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
-import Industries from './pages/Industries';
+import MissionVision from './pages/MissionVision';
 
 // Simple ScrollToTop component
 import { useEffect } from 'react';
@@ -30,7 +30,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/industries" element={<Industries />} />
+        <Route path="/mission-vision" element={<MissionVision />} />
         <Route path="/contact" element={<Contact />} />
         {/* Fallbacks */}
         <Route path="/why-us" element={<Home />} />

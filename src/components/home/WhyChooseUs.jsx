@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
                             Why Choose <span className="text-primary">Esscons</span>?
                         </h2>
                         <p className="text-gray-600 mb-8 text-lg">
-                            With over two decades of experience, we deliver not just machinery, but complete construction solutions that drive productivity and efficiency.
+                            We provide different types of services across all over Odisha according to the customer's requirements. We are one Esscons team committed to Odisha's excellence as a customer-focused equipment supplier
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">

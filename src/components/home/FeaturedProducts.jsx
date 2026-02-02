@@ -22,7 +22,7 @@ const FeaturedProducts = () => {
                         viewport={{ once: true }}
                         className="text-4xl font-bold font-heading text-secondary mb-4"
                     >
-                        Featured Machinery
+                        Our Products
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ const FeaturedProducts = () => {
                         transition={{ delay: 0.1 }}
                         className="text-gray-600 max-w-2xl mx-auto"
                     >
-                        Explore our top-selling construction equipment designed for durability and performance in the toughest environments.
+                        Why not give one of these popular Machines a look? In marketing, a product is anything that can be offered to a market that might satisfy a want or need. In retailing products are called merchandise. In manufacturing.
                     </motion.p>
                 </div>
 

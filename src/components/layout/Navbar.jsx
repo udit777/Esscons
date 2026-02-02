@@ -22,7 +22,7 @@ const Navbar = () => {
         { name: 'Home', path: '/' },
         { name: 'About Us', path: '/about' },
         { name: 'Products', path: '/products' },
-        { name: 'Industries', path: '/industries' },
+        { name: 'Mission & Vision', path: '/mission-vision' },
         { name: 'Why Esscons', path: '/why-us' },
         { name: 'Contact', path: '/contact' },
     ];

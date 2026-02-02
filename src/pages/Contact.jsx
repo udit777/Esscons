@@ -53,7 +53,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-gray-800">Our Headquarters</h4>
-                                        <p className="text-gray-600">Plot No. 123, Industrial Area<br />Bhubaneswar, Odisha, 751010</p>
+                                        <p className="text-gray-600">Esscons Pr- Sahadev Sahu, Plot No D/2<br />Mancheswar Ind Estate, Bhubaneswar</p>
                                     </div>
                                 </div>
 
@@ -63,8 +63,8 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-gray-800">Phone</h4>
-                                        <p className="text-gray-600">+91 98765 43210</p>
-                                        <p className="text-gray-500 text-sm">Mon-Sat, 9am - 7pm</p>
+                                        <p className="text-gray-600">(0674) 2587826(O)</p>
+                                        <p className="text-gray-600">Mobile: 9937070707</p>
                                     </div>
                                 </div>
 
@@ -74,8 +74,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-gray-800">Email</h4>
-                                        <p className="text-gray-600">info@esscons.com</p>
-                                        <p className="text-gray-600">sales@esscons.com</p>
+                                        <p className="text-gray-600">sahadevsahu@esscons.com</p>
                                     </div>
                                 </div>
                             </div>
