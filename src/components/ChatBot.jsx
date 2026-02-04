@@ -134,7 +134,7 @@ const ChatBot = () => {
                                 <div className="flex items-center gap-3">
                                     <div className="relative">
                                         <div className="w-10 h-10 rounded-full bg-white/10 overflow-hidden p-0.5 border border-primary/30">
-                                            <img src="/assets/chat-icon.jpg" alt="Bot" className="w-full h-full object-cover rounded-full" />
+                                            <img src="/assets/chat-icon.png" alt="Bot" className="w-full h-full object-cover rounded-full" />
                                         </div>
                                         <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-secondary rounded-full"></span>
                                     </div>
@@ -243,7 +243,7 @@ const ChatBot = () => {
                                 <X size={32} />
                             </div>
                         ) : (
-                            <img src="/assets/chat-icon.jpg" alt="Chat" className="w-full h-full object-cover" />
+                            <img src="/assets/chat-icon.png" alt="Chat" className="w-full h-full object-cover" />
                         )}
                     </div>
 
