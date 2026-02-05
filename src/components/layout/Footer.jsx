@@ -24,11 +24,18 @@ const Footer = () => {
                     <div>
                         <div className="w-12 h-px bg-primary/50 mb-8"></div> {/* Top yellow line accent */}
                         <ul className="space-y-4">
-                            {['Home', 'About Us', 'Mission & Vision', 'Products', 'Gallery', 'Contact'].map((item) => (
-                                <li key={item}>
-                                    <Link to={`/${item.toLowerCase().replace(' ', '-').replace('&', '').replace('--', '-')}`} className="text-gray-300 hover:text-primary transition-colors flex items-center gap-3 text-sm">
+                            {[
+                                { name: 'Home', path: '/' },
+                                { name: 'About Us', path: '/about' },
+                                { name: 'Mission & Vision', path: '/mission-vision' },
+                                { name: 'Products', path: '/products' },
+                                { name: 'Gallery', path: '/gallery' },
+                                { name: 'Contact', path: '/contact' }
+                            ].map((link) => (
+                                <li key={link.name}>
+                                    <Link to={link.path} className="text-gray-300 hover:text-primary transition-colors flex items-center gap-3 text-sm">
                                         <span className="text-primary">•</span>
-                                        {item}
+                                        {link.name}
                                     </Link>
                                 </li>
                             ))}

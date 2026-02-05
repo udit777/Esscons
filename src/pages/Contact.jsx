@@ -30,11 +30,23 @@ const Contact = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 pt-12 pb-20">
-            <div className="container mx-auto px-4 md:px-8">
+        <div className="min-h-screen bg-gray-50">
+            {/* Hero Section */}
+            <section className="bg-secondary text-white pt-32 pb-16 relative overflow-hidden">
+                <div className="container mx-auto px-4 md:px-8 relative z-10 text-center flex flex-col items-center justify-center h-full">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-4xl md:text-5xl font-bold font-heading mb-4 text-white"
+                    >
+                        Get in Touch
+                    </motion.h1>
+                </div>
+            </section>
+
+            <div className="container mx-auto px-4 md:px-8 py-20">
 
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold font-heading text-secondary mb-4">Get in Touch</h1>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Have questions about our machinery or need a quote? Our team is ready to assist you.
                     </p>

@@ -5,10 +5,22 @@ import { Link } from 'react-router-dom';
 
 const MissionVision = () => {
     return (
-        <div className="bg-white min-h-screen py-20">
-            <div className="container mx-auto px-4 md:px-8">
+        <div className="bg-white min-h-screen">
+            {/* Hero Section */}
+            <section className="bg-secondary text-white pt-32 pb-16 relative overflow-hidden">
+                <div className="container mx-auto px-4 md:px-8 relative z-10 text-center flex flex-col items-center justify-center h-full">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-4xl md:text-5xl font-bold font-heading mb-4 text-white"
+                    >
+                        Our Core Values
+                    </motion.h1>
+                </div>
+            </section>
+
+            <div className="container mx-auto px-4 md:px-8 py-20">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold font-heading text-secondary mb-4">Our Core Values</h1>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Defining who we are and where we are going.
                     </p>
