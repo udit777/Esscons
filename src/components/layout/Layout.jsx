@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
         <div className="flex flex-col min-h-screen bg-white overflow-hidden">
             <Navbar />
             {/* Only add top padding if NOT on home page, because Home has a full-screen Hero that goes under the Navbar */}
-            <main className={`flex-grow ${isHome ? '' : 'pt-20'}`}>
+            <main className={`flex-grow ${isHome ? '' : ''}`}>
                 {children}
             </main>
             <Footer />

@@ -23,7 +23,7 @@ const Navbar = () => {
         { name: 'About Us', path: '/about' },
         { name: 'Products', path: '/products' },
         { name: 'Mission & Vision', path: '/mission-vision' },
-        { name: 'Why Esscons', path: '/why-us' },
+        { name: 'Gallery', path: '/gallery' },
         { name: 'Contact', path: '/contact' },
     ];
 
@@ -55,12 +55,7 @@ const Navbar = () => {
                             )}
                         </Link>
                     ))}
-                    <Link
-                        to="/contact"
-                        className="px-6 py-2 rounded-full font-medium text-sm transition-all hover:shadow-lg bg-secondary text-white hover:bg-opacity-90"
-                    >
-                        Get Quote
-                    </Link>
+
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -93,13 +88,7 @@ const Navbar = () => {
                                     {link.name}
                                 </Link>
                             ))}
-                            <Link
-                                to="/contact"
-                                onClick={() => setIsOpen(false)}
-                                className="bg-secondary text-white text-center py-3 rounded-lg font-medium"
-                            >
-                                Get Quote
-                            </Link>
+
                         </div>
                     </motion.div>
                 )}
