@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Box, Settings, Truck } from 'lucide-react';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
@@ -62,17 +63,21 @@ const FeaturedProducts = () => {
                                 ))}
                             </div>
 
-                            <Button variant="outline" className="w-full">
-                                View Details
-                            </Button>
+                            <Link to="/products" className="w-full">
+                                <Button variant="outline" className="w-full">
+                                    View Details
+                                </Button>
+                            </Link>
                         </Card>
                     ))}
                 </div>
 
                 <div className="text-center mt-12">
-                    <Button variant="primary">
-                        View All Products <ArrowRight size={18} />
-                    </Button>
+                    <Link to="/products">
+                        <Button variant="primary">
+                            View All Products <ArrowRight size={18} />
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </section>

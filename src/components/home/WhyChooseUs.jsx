@@ -3,7 +3,7 @@ import { ShieldCheck, Globe, Users, Award } from 'lucide-react';
 
 const stats = [
     { label: 'Years Experience', value: '20+', icon: <Award size={32} /> },
-    { label: 'Global Clients', value: '500+', icon: <Globe size={32} /> },
+    { label: 'Local Clients', value: '500+', icon: <Globe size={32} /> },
     { label: 'Projects Completed', value: '1200+', icon: <ShieldCheck size={32} /> },
     { label: 'Expert Team', value: '50+', icon: <Users size={32} /> },
 ];
@@ -14,7 +14,7 @@ const features = [
         desc: 'Deep understanding of Cement & Mining sectors with tailored machinery solutions.',
     },
     {
-        title: 'Global Supply Chain',
+        title: 'Local Supply Chain',
         desc: 'Robust logistics network ensuring timely delivery of equipment worldwide.',
     },
     {
