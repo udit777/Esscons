@@ -4,14 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../ui/Button';
 import { ArrowRight } from 'lucide-react';
 
+import { allProducts } from '../../data/products';
+
 const Hero = () => {
-    const images = [
-        "/products/static-road-roller-new.png",
-        "/products/concrete-mixer-blue.png",
-        "/products/vibratory-road-roller-yellow.png",
-        "/products/crawler-excavator-red.png",
-        "/products/wheel-loader.png"
-    ];
+    // Dynamically retrieve all images from the products data
+    const images = allProducts.map(product => product.image);
 
     const [currentIndex, setCurrentIndex] = useState(0);
 

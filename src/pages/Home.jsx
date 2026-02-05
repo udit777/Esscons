@@ -9,8 +9,8 @@ const Home = () => {
         <div className="flex flex-col w-full">
             <Hero />
             <FeaturedProducts />
-            <WhyChooseUs />
-            <Testimonials />
+            {/* <WhyChooseUs /> */}
+            {/* <Testimonials /> */}
             <CTA />
         </div>
     );
