@@ -12,12 +12,7 @@ const Footer = () => {
                         <p className="text-gray-300 mb-8 leading-relaxed text-sm">
                             Demonstrating social responsibility and technical leadership in the industry by further developing our position as a leading supplier of environmentally friendly technologies. Constantly growing and improving
                         </p>
-                        <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-primary hover:text-secondary transition-colors"><Facebook size={18} /></a>
-                            <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-primary hover:text-secondary transition-colors"><Twitter size={18} /></a>
-                            <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-primary hover:text-secondary transition-colors"><Linkedin size={18} /></a>
-                            <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-primary hover:text-secondary transition-colors"><Instagram size={18} /></a>
-                        </div>
+
                     </div>
 
                     {/* Column 2: Navigation */}
