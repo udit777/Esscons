@@ -2,84 +2,12 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, MapPin, Phone, Mail, Loader2, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { allProducts } from '../data/products';
-
-// Simple keyword matching logic
-const findAnswer = (input) => {
-    const lowerInput = input.toLowerCase();
-
-    // 1. Check for greeting
-    if (lowerInput.match(/\b(hi|hello|hey|greetings)\b/)) {
-        return {
-            text: "Hello! Welcome to Esscons. I'm here to help you find the best construction machinery. How can I assist you today?",
-            options: ['View Products', 'Contact Support', 'Company Info']
-        };
-    }
-
-    // 2. Check for contact/address
-    if (lowerInput.match(/\b(contact|address|location|where|email|phone|call)\b/)) {
-        return {
-            text: "You can visit us at our headquarters or reach out via phone/email:",
-            component: (
-                <div className="bg-gray-100 p-3 rounded-lg mt-2 text-xs space-y-2">
-                    <div className="flex gap-2 items-start">
-                        <MapPin size={14} className="text-primary mt-0.5" />
-                        <span>Mancheswar Ind Estate, Bhubaneswar</span>
-                    </div>
-                    <div className="flex gap-2 items-center">
-                        <Phone size={14} className="text-primary" />
-                        <span>(0674) 2587826</span>
-                    </div>
-                    <div className="flex gap-2 items-center">
-                        <Mail size={14} className="text-primary" />
-                        <span>sahadevsahu@esscons.com</span>
-                    </div>
-                </div>
-            )
-        };
-    }
-
-    // 3. Check for specific products
-    const matchedProduct = allProducts.find(p => lowerInput.includes(p.name.toLowerCase()) || lowerInput.includes(p.category.toLowerCase().slice(0, -1)));
-    if (matchedProduct) {
-        return {
-            text: `We have excellent ${matchedProduct.category}! Here is our ${matchedProduct.name}:`,
-            component: (
-                <div className="bg-white border p-2 rounded-lg mt-2 shadow-sm">
-                    <img src={matchedProduct.image} alt={matchedProduct.name} className="w-full h-24 object-contain mb-2 bg-gray-50 rounded" />
-                    <div className="font-bold text-secondary text-xs">{matchedProduct.name}</div>
-                    <div className="text-[10px] text-gray-500 line-clamp-2">{matchedProduct.desc}</div>
-                    <Link to="/products" className="block text-center bg-primary text-secondary text-xs py-1 rounded mt-2 font-bold">View Details</Link>
-                </div>
-            )
-        };
-    }
-
-    // 4. Broad categories
-    if (lowerInput.includes('mixer') || lowerInput.includes('concrete')) {
-        return {
-            text: "We offer high-quality Concrete Mixers and Batching Plants. Would you like to see the details?",
-            options: ['Show Mixers', 'View All Products']
-        };
-    }
-    if (lowerInput.includes('roller') || lowerInput.includes('compactor')) {
-        return {
-            text: "Our Road Rollers are built for durability. We have Static and Vibratory models.",
-            options: ['Show Rollers', 'View All Products']
-        };
-    }
-
-    // Default fallback
-    return {
-        text: "I'm not sure I understood that correctly. Could you please specify if you're looking for Products, Services, or Contact info?",
-        options: ['View Products', 'Contact Us', 'Our History']
-    };
-};
+import { getGeminiResponse } from '../services/gemini';
 
 const ChatBot = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
-        { id: 1, text: "Welcome to Esscons! 🚜 I'm your virtual assistant. Ask me about our machinery or services!", sender: 'bot' }
+        { id: 1, text: "Welcome to Esscons! 🚜 I'm your AI assistant Scoop. Ask me anything about our machinery!", sender: 'bot' }
     ]);
     const [input, setInput] = useState("");
     const [isTyping, setIsTyping] = useState(false);
@@ -103,19 +31,25 @@ const ChatBot = () => {
         setInput("");
         setIsTyping(true);
 
-        // Simulate network delay / thinking
-        setTimeout(() => {
-            const answer = findAnswer(userText);
+        // Get AI Response
+        try {
+            const aiText = await getGeminiResponse(userText);
             const botMsg = {
                 id: Date.now() + 1,
-                text: answer.text,
-                component: answer.component,
-                options: answer.options,
+                text: aiText,
                 sender: 'bot'
             };
             setMessages(prev => [...prev, botMsg]);
+        } catch (error) {
+            const errorMsg = {
+                id: Date.now() + 1,
+                text: "Sorry, I'm having a bit of trouble connecting right now.",
+                sender: 'bot'
+            };
+            setMessages(prev => [...prev, errorMsg]);
+        } finally {
             setIsTyping(false);
-        }, 1200);
+        }
     };
 
     return (
