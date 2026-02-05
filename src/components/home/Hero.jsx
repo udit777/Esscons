@@ -23,11 +23,11 @@ const Hero = () => {
     return (
         <section className="bg-secondary min-h-[90vh] flex flex-col lg:flex-row items-stretch overflow-hidden relative">
             {/* Left Side: Text Content (Centered with padding) */}
-            <div className="w-full lg:w-1/2 flex flex-col justify-center px-4 md:px-12 lg:pl-32 lg:pr-16 py-12 lg:py-0 relative z-10">
-                <h1 className="text-5xl md:text-7xl font-bold font-heading mb-6 leading-tight drop-shadow-sm text-white">
+            <div className="w-full lg:w-1/2 flex flex-col justify-center px-6 md:px-12 lg:pl-32 lg:pr-16 py-16 lg:py-0 relative z-10">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 leading-tight drop-shadow-sm text-white">
                     Building the <span className="text-white drop-shadow-md">Future</span> of Construction
                 </h1>
-                <p className="text-lg md:text-xl text-white/90 mb-8 max-w-lg leading-relaxed">
+                <p className="text-base md:text-xl text-white/90 mb-8 max-w-lg leading-relaxed">
                     Authorized dealers of world-class construction machinery.
                     Reliable, efficient, and built for the toughest terrains.
                 </p>

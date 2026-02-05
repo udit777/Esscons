@@ -21,7 +21,7 @@ const FeaturedProducts = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl font-bold font-heading text-secondary mb-4"
+                        className="text-3xl md:text-4xl font-bold font-heading text-secondary mb-4"
                     >
                         Our Products
                     </motion.h2>
